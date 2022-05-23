@@ -76,4 +76,12 @@
    color: #808080;
 }
 
+.bt_fechar_item:hover{
+   cursor: pointer;
+}
+
+.item_tarefas.fechado{
+   display: none;
+}
+
 

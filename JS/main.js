@@ -5,7 +5,8 @@ btNovaTarefa.addEventListener( 'click', function (event) {
    
    tagLI = criaNovaTarefa()
    
-   criaBtClose()
+   criaBtClose()   
+   selecionaBtFechar()
    
    
 })
@@ -13,6 +14,7 @@ btNovaTarefa.addEventListener( 'click', function (event) {
 
 window.onload = (event) =>{   
    criaBtClose()
+   selecionaBtFechar()
 }
 
 
@@ -27,7 +29,7 @@ function criaNovaTarefa(){
    tagLI.classList.add('item_tarefas')
    tarefasLista.appendChild(tagLI)
    
-
+   
    return tagLI
 }
 
@@ -40,21 +42,22 @@ function criaBtClose() {
    for (let i = 0; i < tarefasLista.length; i++) {
       var elemento = tarefasLista[i]
       var filho = elemento.childElementCount
-
+      
       if (filho == 0) {
          let span = document.createElement('span')
          span.classList.add('bt_fechar_item')
          span.textContent = '\u00D7'
          elemento.appendChild(span)
       }
-   }
-   
-   
-   
+   }  
 }
 
-
-
-
-
-
+function selecionaBtFechar() {
+   var btFecharTarefa = document.querySelectorAll('.bt_fechar_item')
+   for (let i = 0; i < btFecharTarefa.length; i++) {
+      btFecharTarefa[i].addEventListener('click', function (){
+         let tarefa = btFecharTarefa[i].parentNode
+         tarefa.classList.add('fechado')
+      })
+   }
+}
