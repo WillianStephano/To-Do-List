@@ -1,5 +1,5 @@
 <h1 align="center">
-  <br>Gerenciador de Tarefas
+  <br>To Do List
 </h1>
 
 <p align="center">
