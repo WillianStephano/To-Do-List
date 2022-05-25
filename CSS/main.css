@@ -1,5 +1,6 @@
 .corpo{
    background-color: #f8f8f8;
+
 }
 
 .cabecalho{
@@ -16,9 +17,9 @@
 }
 
 .secao_lista{
+   font-family: 'lato';
    margin: 5% auto;
    width: 35%;
-   font-family: 'lato';
 }
 
 .secao_lista .container{
@@ -123,19 +124,3 @@
 .item_tarefas.fechado{
    display: none;
 }
-
-
-.rodape{
-   background-color: #8387d3;
-   color: #ffffff;
-}
-
-.txt_rodape{
-   color: #ffffff;
-   text-align: center;
-   font-size: 14px;
-   font-family: 'nunito';
-   padding: 0.5%;
-   margin-top: 25%;
-}
-
