@@ -90,7 +90,7 @@
 }
 
 .txt_tarefa::before{
-   content: url('Conteudo/check.svg');
+   content: url(../Conteudo/check.svg);
    visibility: hidden;
 }
 
