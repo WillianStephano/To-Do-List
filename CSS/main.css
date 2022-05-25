@@ -3,9 +3,9 @@
 }
 
 .cabecalho{
-   background-color: #8f8f8f;
+   background-color: #8387d3;
    text-align: center;
-   padding: 3%;
+   padding: 4.5%;
 }
 
 .titulo_cabecalho{
@@ -60,6 +60,7 @@
 
 .lista_tarefas{
    box-shadow: 0px 3px 5px #808080b4;
+   min-height: 50vh;
 }
 
 .item_tarefas{
@@ -69,6 +70,7 @@
    border-bottom: 1px solid #c5c5c5;
    background-color: #ffffff;
    width: 100%;
+   padding-left: 2%;
    border-radius: 2px;
    box-sizing: border-box;
    font-weight: 500;
@@ -80,15 +82,26 @@
    cursor: pointer;
 }
 
-.item_tarefas.checked{
-   background-color: rgb(124, 124, 124);
+.item_tarefas.checked .txt_tarefa{
    text-decoration: line-through;
-   color: #ffffff;
-   transition: 250ms;
+   color: #a0a0a0;
+   transition: 350ms;
+   width: 55%;
 }
 
-.item_tarefas.checked::before{
-   content: 'OK';
+.txt_tarefa::before{
+   content: url('/Conteudo/check.svg');
+   visibility: hidden;
+}
+
+.item_tarefas.checked .txt_tarefa::before{
+   visibility: visible;
+}
+
+.txt_tarefa{
+   display: flex;
+   align-items: center;
+   width: 50%;
 }
 
 .bt_fechar_item{
@@ -111,4 +124,18 @@
    display: none;
 }
 
+
+.rodape{
+   background-color: #8387d3;
+   color: #ffffff;
+}
+
+.txt_rodape{
+   color: #ffffff;
+   text-align: center;
+   font-size: 14px;
+   font-family: 'nunito';
+   padding: 0.5%;
+   margin-top: 25%;
+}
 
