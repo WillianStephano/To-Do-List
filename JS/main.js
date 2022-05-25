@@ -3,11 +3,14 @@ const btNovaTarefa = document.querySelector(".bt_nova_tarefa");
 btNovaTarefa.addEventListener("click", function (event) {
    event.preventDefault();
    
-   tagLI = criaNovaTarefa();
-   
-   criaBtClose();
-   selecionaBtFechar();
-   limparForm();
+   var verificaCampo = verificaValorCampo()
+   if (verificaCampo == true) {
+      tagLI = criaNovaTarefa();
+      
+      criaBtClose();
+      selecionaBtFechar();
+      limparForm();
+   }
    
 });
 
@@ -33,7 +36,7 @@ function criaNovaTarefa() {
    
    let tagP = document.createElement("p")
    tagP.classList.add("txt_tarefa");
-
+   
    tagP.textContent = valorNovaTarefa;
    tarefasLista.appendChild(tagLI);
    tagLI.appendChild(tagP);
@@ -81,8 +84,19 @@ function tarefaConcluida() {
          ev.target.classList.toggle("checked");
       }
    },
-      false
+   false
    );
 }
-
 tarefaConcluida()
+
+
+function verificaValorCampo() {
+   let valorNovaTarefa = document.querySelector(".nova_tarefa_campo").value;
+   
+   if (valorNovaTarefa == '') {
+      alert('Erro:Campo Invalido')
+      return false
+   }else{
+      return true
+   }
+}
