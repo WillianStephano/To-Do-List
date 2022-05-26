@@ -25,7 +25,7 @@ O projeto é composto por uma pagina que contem uma unica seção principal:
 
 
 
-<img src="Conteudo/previa-img.PNG" alt="Imagem de pré-visualização da pagina">
+<img src="Conteudo/previa-todolist.PNG" alt="Imagem de pré-visualização da pagina">
 
 ---
 
