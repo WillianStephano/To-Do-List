@@ -9,6 +9,7 @@ btNovaTarefa.addEventListener("click", function (event) {
       
       criaBtClose();
       selecionaBtFechar();
+      gambiarra()
       limparForm();
    }
    
@@ -100,3 +101,15 @@ function verificaValorCampo() {
       return true
    }
 }
+
+
+//Gambiarra criada temporariamente no desespero para finalizar o projeto :/
+function gambiarra() {
+   var colecaoTxt = document.querySelectorAll('.txt_tarefa')
+   for (let i = 0; i < colecaoTxt.length; i++) {
+      colecaoTxt[i].addEventListener('click',function () {
+         var elementoPai = colecaoTxt[i].parentNode
+         elementoPai.classList.toggle('checked')
+      })
+   }
+}  
