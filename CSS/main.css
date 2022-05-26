@@ -1,18 +1,18 @@
 .corpo{
    background-color: #f8f8f8;
-
 }
 
 .cabecalho{
-   background-color: #8387d3;
+   background: linear-gradient(90deg,#574AE8,#3EA1DB);
    text-align: center;
    padding: 4.5%;
+   box-shadow: 0px 3px 8px 0px #808080b0;
 }
 
 .titulo_cabecalho{
+   font-family: 'Lexend Deca', sans-serif;   font-weight: 700;
    font-size: 32px;
-   font-family: 'nunito', sans-serif;
-   font-weight: 700;
+   font-weight: 500;
    color: #ffffff;
 }
 
@@ -34,22 +34,23 @@
 
 .nova_tarefa_campo{
    width: 100%;
-   height: 37px;
+   height: 43px;
    border-radius: 4px 0 0 4px ;
    border: 1px solid #cccccc;
+   font-size: 15px;
 }
 
 .nova_tarefa_campo:focus{
-   outline: 1px solid #a7a7a7;
+   outline: 1px solid #3ea1db;
 }
 
 .bt_nova_tarefa{
    width: auto;
-   background-color: #9c9ed0;
+   background-color: #4c72e3;
    color: #ffffff;
    font-weight: 700;
    font-family: 'nunito', sans-serif;
-   border: 1px solid #808080;
+   border: none;
    border-radius: 0 4px 4px 0;
 }
 
@@ -62,6 +63,7 @@
 .lista_tarefas{
    box-shadow: 0px 3px 5px #808080b4;
    min-height: 50vh;
+   border-radius: 4px;
 }
 
 .item_tarefas{
