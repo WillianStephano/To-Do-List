@@ -12,7 +12,6 @@ btNovaTarefa.addEventListener("click", function (event) {
       gambiarra()
       limparForm();
    }
-   
 });
 
 window.onload = (event) => {
@@ -42,6 +41,7 @@ function criaNovaTarefa() {
    tarefasLista.appendChild(tagLI);
    tagLI.appendChild(tagP);
    
+   tutorialInicial()
    return tagLI;
    
 }
@@ -113,3 +113,23 @@ function gambiarra() {
       })
    }
 }  
+
+
+const overlay = document.querySelector('.teste');
+var campoNovaTarefa = document.querySelector('.nova_tarefa_campo')
+var formulario = document.querySelector('.formulario');
+
+overlay.addEventListener('click', fimTutorial)
+campoNovaTarefa.addEventListener('focus', fimTutorial)
+
+
+function fimTutorial() {
+   overlay.style.display = 'none';
+   var spanForm = formulario.getElementsByTagName('span');
+   for (let i = 0; i < spanForm.length; i++) {
+      const element = spanForm[i];
+      element.style.display = 'none';
+   }
+}
+
+
