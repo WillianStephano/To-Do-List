@@ -41,7 +41,6 @@ function criaNovaTarefa() {
    tarefasLista.appendChild(tagLI);
    tagLI.appendChild(tagP);
    
-   tutorialInicial()
    return tagLI;
    
 }
@@ -61,7 +60,6 @@ function criaBtClose() {
          elemento.appendChild(span);
       }
    }
-   
 }
 
 
